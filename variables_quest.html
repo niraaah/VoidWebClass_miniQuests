@@ -1,0 +1,60 @@
+<script>
+    console.log("< 1번 >")
+    let name = "niraaah"
+    let age = 29
+    let height = 163.5
+    console.log(`name : ${name}`)
+    console.log(`age : ${age}`)
+    console.log(`height : ${height}`)
+    console.log("\n")
+    console.log("< 2번 >")
+    console.log(`${name}, ${age}, ${height}`)
+    console.log("\n")
+    function memo(){
+        let text = ""
+        let question = "1. 작성 2. 조회 3. 수정 4. 삭제 5. 추가기능 6. 종료"
+        while (true){
+            console.log(question)
+            let answer = parseInt(prompt(`${question}\n현재 텍스트: ${text}`), 10)
+            switch(answer){
+                case 1:
+                    console.log("작성")
+                    text = prompt("작성할 텍스트를 입력하세요:")
+                    console.log(`작성된 텍스트: ${text}`)
+                    break
+                case 2:
+                    console.log("조회")
+                    console.log(`현재 텍스트: ${text}`)
+                    break
+                case 3:
+                    console.log("수정")
+                    if (text === "") {
+                        console.log("수정할 텍스트가 없습니다.")
+                    } else {
+                        let newText = prompt("수정할 텍스트를 입력하세요:")
+                        text = newText
+                        console.log(`수정된 텍스트: ${text}`)
+                    }
+                    break
+                case 4:
+                    console.log("삭제")
+                    text = ""
+                    console.log("텍스트가 삭제되었습니다.")
+                    break
+                case 5:
+                    console.log("추가기능")
+                    break
+                case 6:
+                    console.log("종료")
+                    alert("프로그램을 종료합니다.")
+                    return;
+                default:
+                    console.log("잘못된 입력입니다!")
+                    break
+            }
+        }
+    }
+    memo()
+</script>
+<body>
+</body>
